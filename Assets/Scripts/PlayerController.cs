@@ -52,6 +52,6 @@ public class PlayerController : MonoBehaviour {
         if (count >= 12) {
             isClear = true;
             winText.text = "YOU WIN!";
-        }      
+        }
     }
 }
