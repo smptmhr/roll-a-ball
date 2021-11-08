@@ -70,5 +70,6 @@ public class PlayerController : MonoBehaviour {
             pickup.gameObject.SetActive (true);
         }
         replayButton.gameObject.SetActive (false);
+        winText.text = "";
     }
 }
