@@ -13,6 +13,8 @@ public class PlayerController : MonoBehaviour {
     public float time;
     private int count;
     private bool isClear;
+    public float moveHorizontal;
+    public float moveVertical;
 
     // Start is called before the first frame update
     void Start () {
@@ -27,11 +29,10 @@ public class PlayerController : MonoBehaviour {
 
     // Update is called once per frame
     void Update () {
-        float moveHorizontal = Input.GetAxis ("Horizontal");
-        float moveVertical = Input.GetAxis ("Vertical");
+        moveHorizontal = Input.GetAxis ("Horizontal");
+        moveVertical = Input.GetAxis ("Vertical");
 
         Vector3 movement = new Vector3 (moveHorizontal, 0, moveVertical);
-
         rb.AddForce (movement * speed);
         if (!isClear) {
             time += Time.deltaTime;
