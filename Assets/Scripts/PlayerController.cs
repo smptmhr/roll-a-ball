@@ -57,4 +57,10 @@ public class PlayerController : MonoBehaviour {
             winText.text = $"ClearTime:{clearTime}s";
         }
     }
+
+    public void Replay () {
+        transform.position = new Vector3 (0.0f, 0.5f, 0.0f);
+        rb.velocity = Vector3.zero;
+        rb.angularVelocity = Vector3.zero;
+    }
 }

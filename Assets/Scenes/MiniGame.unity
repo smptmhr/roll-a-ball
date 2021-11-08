@@ -911,7 +911,6 @@ GameObject:
   - component: {fileID: 1087599360}
   - component: {fileID: 1087599359}
   - component: {fileID: 1087599358}
-  - component: {fileID: 1087599361}
   m_Layer: 5
   m_Name: Button
   m_TagString: Untagged
@@ -983,9 +982,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1087599361}
-        m_TargetAssemblyTypeName: Replay, Assembly-CSharp
-        m_MethodName: Onclick
+      - m_Target: {fileID: 1488425060}
+        m_TargetAssemblyTypeName: PlayerController, Assembly-CSharp
+        m_MethodName: Replay
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1033,19 +1032,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1087599356}
   m_CullTransparentMesh: 1
---- !u!114 &1087599361
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1087599356}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b2cf142dfc9ef482eb6531ec7ae8e15b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Player: {fileID: 1488425060}
 --- !u!1 &1089132218
 GameObject:
   m_ObjectHideFlags: 0
@@ -1736,7 +1722,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cbd79b662cbef4562806040f52b65dda, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 10
+  speed: 0
   countText: {fileID: 928744961}
   winText: {fileID: 1465020653}
   timeText: {fileID: 645309372}
