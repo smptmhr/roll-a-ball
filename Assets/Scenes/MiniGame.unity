@@ -1727,8 +1727,7 @@ MonoBehaviour:
   winText: {fileID: 1465020653}
   timeText: {fileID: 645309372}
   time: 0
-  moveHorizontal: 0
-  moveVertical: 0
+  pickups: {fileID: 329251929}
 --- !u!54 &1488425061
 Rigidbody:
   m_ObjectHideFlags: 0

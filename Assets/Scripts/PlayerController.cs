@@ -13,6 +13,7 @@ public class PlayerController : MonoBehaviour {
     public float time;
     private int count;
     private bool isClear;
+    public Transform pickups;
 
     // Start is called before the first frame update
     void Start () {
@@ -63,5 +64,8 @@ public class PlayerController : MonoBehaviour {
 
         time = 0.0f;
         count = 0;
+        foreach (Transform pickup in pickups) {
+            pickup.gameObject.SetActive (true);
+        }
     }
 }
