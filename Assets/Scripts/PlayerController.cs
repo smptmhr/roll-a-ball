@@ -62,5 +62,8 @@ public class PlayerController : MonoBehaviour {
         transform.position = new Vector3 (0.0f, 0.5f, 0.0f);
         rb.velocity = Vector3.zero;
         rb.angularVelocity = Vector3.zero;
+
+        time = 0.0f;
+        count = 0;
     }
 }
