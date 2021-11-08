@@ -35,8 +35,8 @@ public class PlayerController : MonoBehaviour {
         rb.AddForce (movement * speed);
         if (!isClear) {
             time += Time.deltaTime;
+            timeText.text = time.ToString ("F2") + "s"; //F2で小数点第2位までを表示
         }
-        timeText.text = time.ToString ("F2"); //F2で小数点第2位までを表示
     }
 
     private void OnTriggerEnter (Collider other) {
@@ -51,7 +51,9 @@ public class PlayerController : MonoBehaviour {
         countText.text = "count : " + count.ToString ();
         if (count >= 12) {
             isClear = true;
-            winText.text = "YOU WIN!";
+            timeText.text = "";
+            string clearTime = time.ToString ("F2");
+            winText.text = $"ClearTime:{clearTime}s";
         }
     }
 }
