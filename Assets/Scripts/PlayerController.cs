@@ -14,6 +14,7 @@ public class PlayerController : MonoBehaviour {
     private int count;
     private bool isClear;
     public Transform pickups;
+    public Button replayButton;
 
     // Start is called before the first frame update
     void Start () {
@@ -54,6 +55,7 @@ public class PlayerController : MonoBehaviour {
             timeText.text = "";
             string clearTime = time.ToString ("F2");
             winText.text = $"ClearTime:{clearTime}s";
+            replayButton.gameObject.SetActive (true);
         }
     }
 
@@ -67,5 +69,6 @@ public class PlayerController : MonoBehaviour {
         foreach (Transform pickup in pickups) {
             pickup.gameObject.SetActive (true);
         }
+        replayButton.gameObject.SetActive (false);
     }
 }
