@@ -66,10 +66,12 @@ public class PlayerController : MonoBehaviour {
 
         time = 0.0f;
         count = 0;
+        countText.text = "count : " + count.ToString ();
         foreach (Transform pickup in pickups) {
             pickup.gameObject.SetActive (true);
         }
         replayButton.gameObject.SetActive (false);
         winText.text = "";
+        isClear = false;
     }
 }

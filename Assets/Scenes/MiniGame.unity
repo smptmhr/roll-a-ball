@@ -917,7 +917,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1087599357
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1728,6 +1728,7 @@ MonoBehaviour:
   timeText: {fileID: 645309372}
   time: 0
   pickups: {fileID: 329251929}
+  replayButton: {fileID: 1087599358}
 --- !u!54 &1488425061
 Rigidbody:
   m_ObjectHideFlags: 0
