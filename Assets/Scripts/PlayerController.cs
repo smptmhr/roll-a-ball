@@ -13,6 +13,8 @@ public class PlayerController : MonoBehaviour {
     public float time;
     private int count;
     private bool isClear;
+    public Transform pickups;
+    public Button replayButton;
 
     // Start is called before the first frame update
     void Start () {
@@ -31,7 +33,6 @@ public class PlayerController : MonoBehaviour {
         float moveVertical = Input.GetAxis ("Vertical");
 
         Vector3 movement = new Vector3 (moveHorizontal, 0, moveVertical);
-
         rb.AddForce (movement * speed);
         if (!isClear) {
             time += Time.deltaTime;
@@ -54,6 +55,23 @@ public class PlayerController : MonoBehaviour {
             timeText.text = "";
             string clearTime = time.ToString ("F2");
             winText.text = $"ClearTime:{clearTime}s";
+            replayButton.gameObject.SetActive (true);
         }
+    }
+
+    public void Replay () {
+        transform.position = new Vector3 (0.0f, 0.5f, 0.0f);
+        rb.velocity = Vector3.zero;
+        rb.angularVelocity = Vector3.zero;
+
+        time = 0.0f;
+        count = 0;
+        countText.text = "count : " + count.ToString ();
+        foreach (Transform pickup in pickups) {
+            pickup.gameObject.SetActive (true);
+        }
+        replayButton.gameObject.SetActive (false);
+        winText.text = "";
+        isClear = false;
     }
 }
